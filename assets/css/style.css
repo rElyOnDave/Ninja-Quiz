@@ -7,6 +7,16 @@
     font-weight: bold; /* Adjust font weight as needed */
 }
 
+header {
+    font-size: 200%;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+
+}
 /* Green Section */
 .difficulty.green {
     background-color: #72efe9; /* Green background color */
@@ -23,6 +33,21 @@
 .difficulty.red {
     background-color: #ff6961; /* Red background color */
     color: #111111; 
+}
+
+/* Footer */
+#social-networks {
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+#social-networks i {
+    font-size: 160%;
+    padding: 5%;
+    color: #3a3a3a;
 }
 
 /* Media Queries for Responsive Layout */
@@ -52,6 +77,7 @@
     .difficulty {
         width: calc(30% - 40px); /* Three sections in a row with 20px margin in between */
         align-self: flex-start;
+        flex-direction: row;
         display: inline-block;
      /* Display sections next to each other */
         margin-right: 20px; /* Margin between sections */
