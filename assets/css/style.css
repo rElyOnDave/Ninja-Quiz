@@ -1,6 +1,8 @@
+/*Basic structure*/
 body {
     display: flex;
     flex-direction: column;
+    padding: 10px;
 }
 
 .difficulty {
@@ -22,7 +24,6 @@ header {
     border-radius: 10px;
     background-color: #ffffff;
     padding: 0 1rem;
-    position: fixed;
     z-index: 99;
     width: 100%;
     display: flex;
@@ -63,12 +64,32 @@ header {
     color: #3a3a3a;
 }
 
-.question {
+.sheet-1 {
     text-align: center;
-    padding: 20px 0;
+    padding: 20px;
     display: flex;
     justify-content: space-evenly;
-    list-style-type: none;
+}
+
+.buttons {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    margin: 0;
+    padding: 0;
+}
+
+.return, .reset {
+    display: inline;
+    margin: 10px;
+    justify-content: space-between;
+}
+
+.reset {
+    margin-left: auto; /* This pushes the reset link to the right */
 }
 
 .answer {
@@ -109,6 +130,7 @@ header {
         width: calc(50% - 20px);
         margin-right: 20px;
         margin-bottom: 20px;
+        margin-left: 30%;
     }
 
     .answer:nth-child(2n) {
@@ -131,6 +153,7 @@ header {
     .answer {
         width: calc(50% - 40px);
         margin-bottom: 40px;
+        margin-left: 30%;
     }
 
     .answer:nth-child(odd) {
