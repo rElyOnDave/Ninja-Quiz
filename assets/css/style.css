@@ -1,35 +1,29 @@
-/*Basic structure*/
-body {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'roboto', sans-serif;
+   
+
 }
 
 .difficulty {
-    padding: 20px;
+    /* padding: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
     text-align: center;
     font-size: 18px;
     font-weight: bold;
+     */
+     
+    max-width: 70%;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    padding: 30px;
+    margin-top: 5em;
+    border-color: black;
 }
 
-header {
-    font-size: 100%;
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #ffffff;
-    padding: 0 1rem;
-    z-index: 99;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-}
 
 /* Green Section */
 .difficulty.green {
@@ -48,6 +42,24 @@ header {
     background-color: #ff6961;
     color: #111111;
 }
+ 
+/* Green hover */
+.difficulty.green:hover {
+    background-color: #57bbb6;
+    color: #111111;
+}
+
+/* Yellow hover */
+.difficulty.yellow:hover {
+    background-color: #af9a45;
+    color: #111111;
+}
+
+/* Red hover */
+.difficulty.red:hover {
+    background-color: #9c413c;
+    color: #111111;
+}
 
 /* Footer */
 #social-networks {
@@ -64,104 +76,82 @@ header {
     color: #3a3a3a;
 }
 
-.sheet-1 {
-    text-align: center;
-    padding: 20px;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.buttons {
-    width: 100%;
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 10vh;
-    margin: 0;
-    padding: 0;
-}
-
-.return, .reset {
-    display: inline;
-    margin: 10px;
-    justify-content: space-between;
-}
-
-.reset {
-    margin-left: auto; /* This pushes the reset link to the right */
-}
-
-.answer {
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    text-align: center;
-    font-size: 18px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-    box-shadow: 0 2px 2px #3a3a3a;
-    box-sizing: border-box;
-    width: 100%;
-}
-
-/* Media Queries for Responsive Layout */
-@media (max-width: 767px) {
-    /* For smaller screens (phones) */
-    .difficulty,
-    .answer {
-        width: 100%;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-    /* For tablets */
-    .difficulty {
-        width: calc(45% - 20px);
-        display: inline-block;
-        margin-right: 20px;
-    }
-
-    .difficulty:nth-child(2n) {
-        margin-right: 0;
-    }
-
-    .answer {
-        width: calc(50% - 20px);
-        margin-right: 20px;
-        margin-bottom: 20px;
-        margin-left: 30%;
-    }
-
-    .answer:nth-child(2n) {
-        margin-right: 0;
-    }
-}
-
-@media (min-width: 1024px) {
-    /* For larger screens (desktop and above) */
-    .difficulty {
-        width: calc(30% - 40px);
-        display: inline-block;
-        margin-right: 20px;
-    }
-
-    .difficulty:last-child {
-        margin-right: 0;
-    }
-
-    .answer {
-        width: calc(50% - 40px);
-        margin-bottom: 40px;
-        margin-left: 30%;
-    }
-
-    .answer:nth-child(odd) {
-        clear: none;
-    }
-}
-
 /* Add hover effect to change background color to grey */
 .answer:hover {
     background-color: #8d8d8d;
+}
+
+.app{
+    background-color: grey;
+    width: 50%;
+    max-width: 600px;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    padding: 30px;
+    margin-top: -2em;
+    border-color: black;
+    align-items: center;
+    
+}
+.quiz
+{ padding: 20px 0;}
+
+.btn {
+    background: white;
+    color: black;
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.quiz h2 {
+    font-size: 18px;
+    color: black;
+    font-weight: 600;
+}
+
+.app h1 {
+    font-size: 25px;
+    color: black;
+    font-weight: 600;
+    border-bottom: 1px solid black;
+    padding-bottom: 30px;
+    text-align: center;
+    }
+   
+   quiz-score {
+    text-align: right;
+    font-weight: 600;
+    font-size: 1.2rem;
+    border: 5px solid;
+    font-weight: bold;
+    width: 100px;
+    height:50px;
+    
+   }
+
+   @media (max-width: 767px) {
+    .container {
+        width: 100%; 
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .difficulty {
+        width: 100%;
+        padding: 0;
+        padding-bottom: 20px;
+        flex-grow: 1;
+    }
+    .footer fixed-bottom {
+        width: 100%;
+        padding: 10px 0;
+        margin: 1px;
+        box-sizing: border-box;
+        position: fixed;
+    }
 }
